@@ -36,6 +36,9 @@
       }
     });
     gtag('set', { 'user_id': 'Raphael' });
+    dataLayer.push({
+      'event': 'default_consent'
+    });
 
   </script>
 
@@ -204,7 +207,7 @@
   <script src="js/clean-blog.min.js"></script>
 
   <script>
-    gtag("event", "add_to_cart", {
+    gtag("event", "begin_checkout", {
       value: 29.98,
       coupon: "SUMMER_DISCOUNT",
       currency: "USD",
