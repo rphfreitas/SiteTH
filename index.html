@@ -199,12 +199,25 @@
   <script src="js/clean-blog.min.js"></script>
 
   <script>
-    gtag('event', 'page_view', {
-      page: {
-        name: 'index.html',
-        user: 'Raphael'
-      }
-    })
+   gtag("event", "begin_checkout", {
+  value: 29.98,
+  coupon: "SUMMER_DISCOUNT",
+  currency: "USD",
+  items: [
+    {
+      id: "P12345",
+      name: "Android Warhol T-Shirt",
+      list_name: "Search Results",
+      brand: "Google",
+      category: "Apparel/T-Shirts",
+      coupon: "SUMMER_DISCOUNT",
+      variant: "Black",
+      list_position: 1,
+      quantity: 2,
+      price: 14.99
+    }
+  ]
+});
   </script>
 
 </body>
