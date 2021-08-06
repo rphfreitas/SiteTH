@@ -58,7 +58,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Início</a>
+            <a (click)="click($event)" class="nav-link" href="index.html">Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">Sobre</a>
@@ -205,7 +205,8 @@
   <script src="js/clean-blog.min.js"></script>
 
   <script>
-    gtag("event", "begin_checkout", {
+    click(event) {
+      gtag("event", "click", {
       value: 29.98,
       coupon: "SUMMER_DISCOUNT",
       currency: "USD",
@@ -224,6 +225,7 @@
         }
       ]
     });
+    }
   </script>
 
   <script>
@@ -231,7 +233,7 @@
       "transaction_id": "24.031608523954162",
       "affiliation": "Google online store",
       "value": 23.07,
-      "currency": "USD",
+      "currency": "BRL",
       "tax": 1.24,
       "shipping": 0,
       "items": [
@@ -258,32 +260,6 @@
           "price": "3.0"
         }
       ]
-    });
-    dataLayer.push({
-      'ecommerce': {
-        'currencyCode': 'EUR',                       // Local currency is optional.
-        'impressions': [
-          {
-            'name': 'Triblend Android T-Shirt',       // Name or ID is required.
-            'id': '12345',
-            'price': '15.25',
-            'brand': 'Google',
-            'category': 'Apparel',
-            'variant': 'Gray',
-            'list': 'Search Results',
-            'position': 1
-          },
-          {
-            'name': 'Donut Friday Scented T-Shirt',
-            'id': '67890',
-            'price': '33.75',
-            'brand': 'Google',
-            'category': 'Apparel',
-            'variant': 'Black',
-            'list': 'Search Results',
-            'position': 2
-          }]
-      }
     });
   </script>
 
